@@ -8,5 +8,7 @@
   :class :40ants-asdf-system
   :defsystem-depends-on ("40ants-asdf-system")
   :pathname "src"
-  :depends-on ("40ants-slynk/core")
+  :serial t
+  :depends-on ("slynk/mrepl"
+               "40ants-slynk/core")
   :in-order-to ((test-op (test-op "40ants-slynk-tests"))))

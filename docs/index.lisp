@@ -10,6 +10,7 @@
                 #:defsection-copy)
   (:import-from #:40ants-slynk-docs/changelog
                 #:@changelog)
+  (:import-from #:40ants-slynk)
   (:import-from #:docs-config
                 #:docs-config)
   (:export #:@index
@@ -41,7 +42,15 @@
                                    "TODO"
                                    "Unlicense"
                                    "REPL"
-                                   "GIT"))
+                                   "GIT"
+                                   "ASDF:PACKAGE-INFERRED-SYSTEM"
+                                   "ASDF"
+                                   "SLY"
+                                   "SLYNK"
+                                   "SLYNK_PORT"
+                                   "SLYNK_INTERFACE"
+                                   "40A")
+                    :external-docs ("https://40ants.com/logging"))
   (40ants-slynk system)
   "
 [![](https://github-actions.40ants.com/40ants/slynk/matrix.svg?only=ci.run-tests)](https://github.com/40ants/slynk/actions)
@@ -49,7 +58,8 @@
 ![Quicklisp](http://quickdocs.org/badge/40ants-slynk.svg)
 "
   (@installation section)
-  (@usage section))
+  (@usage section)
+  (@api section))
 
 
 (defsection-copy @readme @index)
@@ -67,10 +77,15 @@ You can install this library from Quicklisp, but you want to receive updates qui
 """)
 
 
-(defsection @usage (:title "Usage"
-                    :ignore-words ("ASDF:PACKAGE-INFERRED-SYSTEM"
-                                   "ASDF"
-                                   "40A"))
+(defsection @usage (:title "Usage")
   "
-TODO: Write a library description. Put some examples here.
+This library provides a little helper, used in 40Ants webservices.
+it does two things:
+
+- Starts Slynk server in there is SLYNK_PORT env variable.
+- Setup logging for connected Slynk connection. It uses 40ANTS-LOGGING system for configuration.
 ")
+
+(defsection @api (:title "API")
+  (40ants-slynk:*connections* variable)
+  (40ants-slynk:start-slynk-if-needed function))
