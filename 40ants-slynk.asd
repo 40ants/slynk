@@ -2,7 +2,7 @@
   :description "Utilities to start SLYNK if needed and to track active connections."
   :author "Alexander Artemenko <svetlyak.40wt@gmail.com>"
   :license "Unlicense"
-  :homepage "https://40ants.com/slynk"
+  :homepage "https://40ants.com/slynk/"
   :source-control (:git "https://github.com/40ants/slynk")
   :bug-tracker "https://github.com/40ants/slynk/issues"
   :class :40ants-asdf-system
