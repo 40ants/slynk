@@ -14,7 +14,7 @@
 
 * Author: Alexander Artemenko <svetlyak.40wt@gmail.com>
 
-* Homepage: [https://40ants.com/slynk][0d3c]
+* Homepage: [https://40ants.com/slynk/][fe84]
 
 * Bug tracker: [https://github.com/40ants/slynk/issues][f5e4]
 
@@ -44,7 +44,7 @@ it does two things:
 
 * Starts Slynk server in there is `SLYNK`_`PORT` env variable.
 
-* Setup logging for connected Slynk connection. It uses [`40ants-logging`][3c67] system for configuration.
+* Setup logging for connected Slynk connection. It uses [`40ants-logging`][970f] system for configuration.
 
 <a id="x-2840ANTS-SLYNK-DOCS-2FINDEX-3A-3A-40API-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
 
@@ -52,13 +52,13 @@ it does two things:
 
 <a id="x-2840ANTS-SLYNK-3A-2ACONNECTIONS-2A-20-28VARIABLE-29-29"></a>
 
-### [variable](5c90) `40ants-slynk:*connections*` nil
+### [variable](01a9) `40ants-slynk:*connections*` nil
 
 Here we'll store all Slynk connections.
 
 <a id="x-2840ANTS-SLYNK-3ASTART-SLYNK-IF-NEEDED-20FUNCTION-29"></a>
 
-### [function](ea44) `40ants-slynk:start-slynk-if-needed`
+### [function](9ce8) `40ants-slynk:start-slynk-if-needed`
 
 Use this function before starting the backend server.
 
@@ -67,12 +67,12 @@ will create a Slynk server on that port and localhost interface.
 To change an interface, set `SLYNK`_`INTERFACE` environment variable.
 
 
-[3c67]: /home/runner/work/logging/logging/docs/build/#x-28-23A-28-2814-29-20BASE-CHAR-20-2E-20-2240ants-logging-22-29-20ASDF-2FSYSTEM-3ASYSTEM-29
-[0d3c]: https://40ants.com/slynk
+[970f]: https://40ants.com/logging/#x-28-23A-28-2814-29-20BASE-CHAR-20-2E-20-2240ants-logging-22-29-20ASDF-2FSYSTEM-3ASYSTEM-29
+[fe84]: https://40ants.com/slynk/
 [1ed5]: https://github.com/40ants/slynk
 [e83d]: https://github.com/40ants/slynk/actions
-[5c90]: https://github.com/40ants/slynk/blob/723e206529592779f74ba157e2334315606d3512/src/core.lisp#L23
-[ea44]: https://github.com/40ants/slynk/blob/723e206529592779f74ba157e2334315606d3512/src/core.lisp#L63
+[01a9]: https://github.com/40ants/slynk/blob/9f5cf0883c964143c33dbbd3b68b4899fc65ad21/src/core.lisp#L23
+[9ce8]: https://github.com/40ants/slynk/blob/9f5cf0883c964143c33dbbd3b68b4899fc65ad21/src/core.lisp#L63
 [f5e4]: https://github.com/40ants/slynk/issues
 
 * * *
