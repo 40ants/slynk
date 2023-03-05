@@ -48,6 +48,7 @@
                                    "SLY"
                                    "SLYNK"
                                    "SLYNK_PORT"
+                                   "PORT"
                                    "SLYNK_INTERFACE"
                                    "40A")
                     :external-docs ("https://40ants.com/logging"))
