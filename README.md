@@ -52,13 +52,13 @@ it does two things:
 
 <a id="x-2840ANTS-SLYNK-3A-2ACONNECTIONS-2A-20-28VARIABLE-29-29"></a>
 
-### [variable](b43c) `40ants-slynk:*connections*` nil
+### [variable](5c90) `40ants-slynk:*connections*` nil
 
 Here we'll store all Slynk connections.
 
 <a id="x-2840ANTS-SLYNK-3ASTART-SLYNK-IF-NEEDED-20FUNCTION-29"></a>
 
-### [function](6889) `40ants-slynk:start-slynk-if-needed`
+### [function](ea44) `40ants-slynk:start-slynk-if-needed`
 
 Use this function before starting the backend server.
 
@@ -71,8 +71,8 @@ To change an interface, set `SLYNK`_`INTERFACE` environment variable.
 [0d3c]: https://40ants.com/slynk
 [1ed5]: https://github.com/40ants/slynk
 [e83d]: https://github.com/40ants/slynk/actions
-[b43c]: https://github.com/40ants/slynk/blob/f48a6e81580b1e0be8a2969702d7713f5240757c/src/core.lisp#L23
-[6889]: https://github.com/40ants/slynk/blob/f48a6e81580b1e0be8a2969702d7713f5240757c/src/core.lisp#L63
+[5c90]: https://github.com/40ants/slynk/blob/723e206529592779f74ba157e2334315606d3512/src/core.lisp#L23
+[ea44]: https://github.com/40ants/slynk/blob/723e206529592779f74ba157e2334315606d3512/src/core.lisp#L63
 [f5e4]: https://github.com/40ants/slynk/issues
 
 * * *
