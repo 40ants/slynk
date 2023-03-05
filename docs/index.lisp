@@ -51,7 +51,7 @@
                                    "PORT"
                                    "SLYNK_INTERFACE"
                                    "40A")
-                    :external-docs ("https://40ants.com/logging"))
+                    :external-docs ("https://40ants.com/logging/"))
   (40ants-slynk system)
   "
 [![](https://github-actions.40ants.com/40ants/slynk/matrix.svg?only=ci.run-tests)](https://github.com/40ants/slynk/actions)
