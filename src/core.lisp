@@ -82,8 +82,10 @@
       ;; To suppress this message from SLYNK:
       ;; Slynk started at port: 4005.
       ;; we need to override these two streams:
-      (let* ((*standard-output* (make-broadcast-stream))
-             (*error-output* *standard-output*))
+      (let* ((dev-null (make-broadcast-stream))
+             (*standard-output* dev-null)
+             (*error-output* dev-null)
+             (slynk:*log-output* dev-null))
         (slynk:create-server :dont-close t
                              :port port
                              :interface interface))
