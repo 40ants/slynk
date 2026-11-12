@@ -49,13 +49,13 @@ it does the following things:
 
 <a id="x-2840ANTS-SLYNK-3A-2ACONNECTIONS-2A-20-28VARIABLE-29-29"></a>
 
-### [variable](0be3) `40ants-slynk:*connections*` nil
+### [variable](3421) `40ants-slynk:*connections*` nil
 
 Here we'll store all Slynk connections.
 
 <a id="x-2840ANTS-SLYNK-3ASTART-SLYNK-IF-NEEDED-20FUNCTION-29"></a>
 
-### [function](a23b) `40ants-slynk:start-slynk-if-needed`
+### [function](2cc7) `40ants-slynk:start-slynk-if-needed`
 
 Use this function before starting the backend server.
 
@@ -72,8 +72,8 @@ the structure of sources) instead of being placed near the sources.
 [fe84]: https://40ants.com/slynk/
 [1ed5]: https://github.com/40ants/slynk
 [e83d]: https://github.com/40ants/slynk/actions
-[0be3]: https://github.com/40ants/slynk/blob/913a86bce7bab3edff9b8f42144e4f42f2a24a35/src/core.lisp#L23
-[a23b]: https://github.com/40ants/slynk/blob/913a86bce7bab3edff9b8f42144e4f42f2a24a35/src/core.lisp#L87
+[3421]: https://github.com/40ants/slynk/blob/8ec30a8a78429554f56491d5999fb741ef87a4cf/src/core.lisp#L23
+[2cc7]: https://github.com/40ants/slynk/blob/8ec30a8a78429554f56491d5999fb741ef87a4cf/src/core.lisp#L87
 [f5e4]: https://github.com/40ants/slynk/issues
 [422a]: https://quickdocs.org/40ants-logging
 [07be]: https://quickdocs.org/global-vars
