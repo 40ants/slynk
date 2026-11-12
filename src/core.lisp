@@ -60,12 +60,40 @@
         (remove conn *connections*)))
 
 
+(defun make-fasl-path (input-file output-dir)
+  (let* ((default-output (compile-file-pathname input-file))
+         (relative-default (make-pathname
+                            :directory (list* :relative
+                                              (cdr (pathname-directory default-output)))
+                            :defaults default-output))
+         (target (merge-pathnames relative-default
+                                  (uiop:ensure-directory-pathname output-dir))))
+    (ensure-directories-exist target)
+    target))
+
+
+(defun make-fasl-path-maker (dir)
+  (flet ((make-fasl-path (input-file &optional options)
+           (declare (ignore options))
+           (make-fasl-path input-file dir))
+         (default-fasl-path-maker (input-file &optional options)
+           (declare (ignore options))
+           (compile-file-pathname input-file)))
+    (if dir
+      #'make-fasl-path
+      #'default-fasl-path-maker)))
+
+
 (defun start-slynk-if-needed ()
   "Use this function before starting the backend server.
 
    If SLYNK_PORT environment variable is set, then this function
    will create a Slynk server on that port and localhost interface.
-   To change an interface, set SLYNK_INTERFACE environment variable."
+   To change an interface, set SLYNK_INTERFACE environment variable.
+
+   If FASL_DIR environment variable is set, then fasl files, produced
+   during compilation, will be written into that directory (mirroring
+   the structure of sources) instead of being placed near the sources."
   
   (when (and (uiop:getenv "SLYNK_PORT")
              (not *slynk-already-running*))
@@ -78,6 +106,10 @@
       (slynk-api:add-hook slynk-api:*connection-closed-hook*
 			  'on-connection-close)
       (setf slynk:*use-dedicated-output-stream* nil)
+
+      (when (uiop:getenv "FASL_DIR")
+        (setf slynk:*fasl-pathname-function*
+              (make-fasl-path-maker (uiop:getenv "FASL_DIR"))))
 
       ;; To suppress this message from SLYNK:
       ;; Slynk started at port: 4005.
