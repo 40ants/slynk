@@ -49,6 +49,9 @@
                                    "SLYNK_PORT"
                                    "PORT"
                                    "SLYNK_INTERFACE"
+                                   "INTERFACE"
+                                   "FASL"
+                                   "DIR"
                                    "40A")
                     :external-docs ("https://40ants.com/logging/"))
   (40ants-slynk system)
@@ -80,10 +83,14 @@ You can install this library from Quicklisp, but you want to receive updates qui
 (defsection @usage (:title "Usage")
   "
 This library provides a little helper, used in 40Ants webservices.
-it does two things:
+it does the following things:
 
 - Starts Slynk server in there is SLYNK_PORT env variable.
 - Setup logging for connected Slynk connection. It uses 40ANTS-LOGGING system for configuration.
+- If FASL_DIR env variable is set, then fasl files, produced during compilation,
+  are written into this directory (mirroring the structure of sources) instead
+  of being placed near the sources. This is useful when the server runs under
+  another user or has a read-only filesystem.
 ")
 
 (defsection @api (:title "API")
